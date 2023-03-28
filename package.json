@@ -1,0 +1,19 @@
+{
+  "name": "image-uploader",
+  "version": "1.0.0",
+  "description": "image-uploader which connect to firebase storage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duncanchiu409/image-uploader.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duncanchiu409/image-uploader/issues"
+  },
+  "homepage": "https://github.com/duncanchiu409/image-uploader#readme"
+}
