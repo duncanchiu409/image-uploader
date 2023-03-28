@@ -3,13 +3,19 @@ const output = document.querySelector("output")
 let imagesArray = []
 
 import { initializeApp } from "firebase/app";
-import { getStorage } from "firebase/storage";
+import { getStorage, ref } from "firebase/storage";
 
 // TODO: Replace the following with your app's Firebase project configuration
 // See: https://firebase.google.com/docs/web/learn-more#config-object
 const firebaseConfig = {
-  // ...
-  storageBucket: ''
+    apiKey: "AIzaSyBOv7f3jBijB55qzzgFzJgZs9W3lWsnLG4",
+    authDomain: "colal-ae06f.firebaseapp.com",
+    projectId: "colal-ae06f",
+    storageBucket: "colal-ae06f.appspot.com",
+    messagingSenderId: "660958602583",
+    appId: "1:660958602583:web:996805efd91f7fc3fc4a12",
+    measurementId: "G-19Q2STYEBR",
+    storageBucket: ''
 };
 
 // Initialize Firebase
@@ -17,10 +23,12 @@ const app = initializeApp(firebaseConfig);
 
 // Initialize Cloud Storage and get a reference to the service
 const storage = getStorage(app);
+const storageRef = ref(storage, "images")
 
 input.addEventListener("change", function() {
     const file = input.files
     imagesArray.push(file[0])
+    uploadFile(storageRef, file)
     displayImages()
 })
 
@@ -38,4 +46,11 @@ function displayImages() {
 function deleteImage(index) {
     imagesArray.splice(index, 1)
     displayImages()
+}
+
+function uploadFile(storageRef, file){
+    // 'file' comes from the Blob or File API
+    uploadBytes(storageRef, file).then((snapshot) => {
+        console.log('Uploaded a blob or file!');
+    });  
 }
