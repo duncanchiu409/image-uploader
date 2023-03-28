@@ -1,0 +1,23 @@
+.container{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1{
+    color: white;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+body{
+    margin: 0%;
+}

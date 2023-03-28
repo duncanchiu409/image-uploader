@@ -8,14 +8,6 @@ import { getStorage, ref } from "firebase/storage";
 // TODO: Replace the following with your app's Firebase project configuration
 // See: https://firebase.google.com/docs/web/learn-more#config-object
 const firebaseConfig = {
-    apiKey: "AIzaSyBOv7f3jBijB55qzzgFzJgZs9W3lWsnLG4",
-    authDomain: "colal-ae06f.firebaseapp.com",
-    projectId: "colal-ae06f",
-    storageBucket: "colal-ae06f.appspot.com",
-    messagingSenderId: "660958602583",
-    appId: "1:660958602583:web:996805efd91f7fc3fc4a12",
-    measurementId: "G-19Q2STYEBR",
-    storageBucket: ''
 };
 
 // Initialize Firebase
